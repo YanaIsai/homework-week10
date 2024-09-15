@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Cats</h1>
+    <img src="../images/cat1.jpg" id="img1">
+    <div class="btns">
+        <button id="btn1" onclick="changeImg()">Previous</button>
+        <button id="btn2" onclick="changeImg()">Next</button>
+    </div>
+
+
+    <script>
+        function showMessage() {
+            console.log('Я учу JavaScript!')
+        }
+
+        showMessage()
+
+        function changeImg() {
+            let image = document.getElementById('img1');
+
+            if (image.src.match('images/cat1.jpg')) { image.src = 'images/cat2.jpg' } else { image.src = 'images/cat1.jpg' }
+        }
+    </script>
+</body>
+
+</html>
